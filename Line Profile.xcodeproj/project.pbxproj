@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BA05D31E22C0AAB70012F111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05D31D22C0AAB70012F111 /* AppDelegate.swift */; };
-		BA05D32022C0AAB70012F111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05D31F22C0AAB70012F111 /* ViewController.swift */; };
 		BA05D32322C0AAB70012F111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05D32122C0AAB70012F111 /* Main.storyboard */; };
 		BA05D32522C0AAB90012F111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA05D32422C0AAB90012F111 /* Assets.xcassets */; };
 		BA05D32822C0AAB90012F111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05D32622C0AAB90012F111 /* LaunchScreen.storyboard */; };
+		BA05D33522C0CEBE0012F111 /* LineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA05D33322C0CEBE0012F111 /* LineTableViewCell.xib */; };
+		BA05D33922C0CFED0012F111 /* LineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05D33822C0CFED0012F111 /* LineTableViewCell.swift */; };
+		BA05D33C22C0D4090012F111 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05D33B22C0D4090012F111 /* FirstTableViewController.swift */; };
+		BA05D33E22C1C90F0012F111 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05D33D22C1C90F0012F111 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA05D31A22C0AAB70012F111 /* Line Profile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Line Profile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA05D31D22C0AAB70012F111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA05D31F22C0AAB70012F111 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA05D32222C0AAB70012F111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA05D32422C0AAB90012F111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA05D32722C0AAB90012F111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA05D32922C0AAB90012F111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA05D33322C0CEBE0012F111 /* LineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineTableViewCell.xib; sourceTree = "<group>"; };
+		BA05D33822C0CFED0012F111 /* LineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTableViewCell.swift; sourceTree = "<group>"; };
+		BA05D33B22C0D4090012F111 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
+		BA05D33D22C1C90F0012F111 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../View/SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,9 @@
 			isa = PBXGroup;
 			children = (
 				BA05D31C22C0AAB70012F111 /* Line Profile */,
+				BA05D33A22C0D36B0012F111 /* Controller */,
+				BA05D33622C0CEE10012F111 /* View */,
+				BA05D33722C0CFC10012F111 /* Model */,
 				BA05D31B22C0AAB70012F111 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,13 +64,37 @@
 			isa = PBXGroup;
 			children = (
 				BA05D31D22C0AAB70012F111 /* AppDelegate.swift */,
-				BA05D31F22C0AAB70012F111 /* ViewController.swift */,
 				BA05D32122C0AAB70012F111 /* Main.storyboard */,
 				BA05D32422C0AAB90012F111 /* Assets.xcassets */,
 				BA05D32622C0AAB90012F111 /* LaunchScreen.storyboard */,
 				BA05D32922C0AAB90012F111 /* Info.plist */,
 			);
 			path = "Line Profile";
+			sourceTree = "<group>";
+		};
+		BA05D33622C0CEE10012F111 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA05D33322C0CEBE0012F111 /* LineTableViewCell.xib */,
+				BA05D33822C0CFED0012F111 /* LineTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA05D33722C0CFC10012F111 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA05D33A22C0D36B0012F111 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA05D33B22C0D4090012F111 /* FirstTableViewController.swift */,
+				BA05D33D22C1C90F0012F111 /* SecondViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA05D32822C0AAB90012F111 /* LaunchScreen.storyboard in Resources */,
+				BA05D33522C0CEBE0012F111 /* LineTableViewCell.xib in Resources */,
 				BA05D32522C0AAB90012F111 /* Assets.xcassets in Resources */,
 				BA05D32322C0AAB70012F111 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA05D32022C0AAB70012F111 /* ViewController.swift in Sources */,
+				BA05D33E22C1C90F0012F111 /* SecondViewController.swift in Sources */,
+				BA05D33922C0CFED0012F111 /* LineTableViewCell.swift in Sources */,
 				BA05D31E22C0AAB70012F111 /* AppDelegate.swift in Sources */,
+				BA05D33C22C0D4090012F111 /* FirstTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

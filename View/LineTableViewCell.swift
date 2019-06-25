@@ -8,15 +8,15 @@
 
 import UIKit
 
+
+
 class LineTableViewCell: UITableViewCell {
 
-    var data = [
-    ("", ["Profile","Account","Privacy","Account transfer"]),
-    ("", ["Stickers","Themes","Coins"]),
-    ("", ["Notificiations","Photos & videos","Chats","Calls","Friends","Timeline"])
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
     
-    ]
     
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
