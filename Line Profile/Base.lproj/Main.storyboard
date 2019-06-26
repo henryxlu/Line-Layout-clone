@@ -66,18 +66,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPQ-7g-Agi">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPQ-7g-Agi">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="ea7-4h-GDF"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q2S-Mf-MdJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="Max-0j-Wyp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-he-2Qm">
+                                <rect key="frame" x="167" y="142" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Zp5-UM-GKc"/>
+                                    <constraint firstAttribute="height" constant="80" id="nnS-wX-DMq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ThV-8f-jOA">
+                                <rect key="frame" x="387" y="250" width="23" height="22"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N4V-fx-VaI">
+                                <rect key="frame" x="0.0" y="276" width="414" height="620"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTx-hD-gJT">
+                                <rect key="frame" x="230" y="206" width="23" height="22"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="N4V-fx-VaI" secondAttribute="bottom" id="0WR-hJ-7RD"/>
+                            <constraint firstItem="OaG-2S-ore" firstAttribute="bottom" secondItem="PTx-hD-gJT" secondAttribute="bottom" constant="634" id="6Ra-NZ-MWf"/>
+                            <constraint firstItem="LPQ-7g-Agi" firstAttribute="bottom" secondItem="OaG-2S-ore" secondAttribute="top" id="88v-5M-b2P"/>
+                            <constraint firstItem="PTx-hD-gJT" firstAttribute="top" secondItem="LPQ-7g-Agi" secondAttribute="bottom" constant="118" id="Aj0-tO-SgS"/>
+                            <constraint firstItem="OaG-2S-ore" firstAttribute="bottom" secondItem="ThV-8f-jOA" secondAttribute="bottom" constant="590" id="BSa-C5-CvJ"/>
+                            <constraint firstItem="q2S-Mf-MdJ" firstAttribute="top" secondItem="LPQ-7g-Agi" secondAttribute="bottom" id="FTk-ap-Y9R"/>
+                            <constraint firstItem="N4V-fx-VaI" firstAttribute="top" secondItem="q2S-Mf-MdJ" secondAttribute="bottom" id="FhW-TE-aSG"/>
+                            <constraint firstItem="rYp-he-2Qm" firstAttribute="centerY" secondItem="q2S-Mf-MdJ" secondAttribute="centerY" id="JPW-ty-oQV"/>
+                            <constraint firstItem="rYp-he-2Qm" firstAttribute="top" secondItem="LPQ-7g-Agi" secondAttribute="bottom" constant="54" id="KiQ-kz-OQQ"/>
+                            <constraint firstItem="q2S-Mf-MdJ" firstAttribute="trailing" secondItem="OaG-2S-ore" secondAttribute="trailing" id="P2u-CN-EZv"/>
+                            <constraint firstItem="PTx-hD-gJT" firstAttribute="leading" secondItem="OaG-2S-ore" secondAttribute="leading" constant="230" id="SIx-Tj-Huk"/>
+                            <constraint firstItem="ThV-8f-jOA" firstAttribute="top" secondItem="LPQ-7g-Agi" secondAttribute="bottom" constant="162" id="T5j-lr-eIv"/>
+                            <constraint firstItem="LPQ-7g-Agi" firstAttribute="leading" secondItem="q2S-Mf-MdJ" secondAttribute="leading" id="U4j-hx-Z1G"/>
+                            <constraint firstItem="rYp-he-2Qm" firstAttribute="leading" secondItem="OaG-2S-ore" secondAttribute="leading" constant="167" id="U5l-zy-Frg"/>
+                            <constraint firstItem="rYp-he-2Qm" firstAttribute="top" secondItem="q2S-Mf-MdJ" secondAttribute="bottom" constant="-134" id="bGa-oH-Mjf"/>
+                            <constraint firstItem="N4V-fx-VaI" firstAttribute="leading" secondItem="OaG-2S-ore" secondAttribute="leading" id="gfQ-UI-giL"/>
+                            <constraint firstItem="OaG-2S-ore" firstAttribute="trailing" secondItem="ThV-8f-jOA" secondAttribute="trailing" constant="4" id="hGc-Gh-lH5"/>
+                            <constraint firstItem="OaG-2S-ore" firstAttribute="trailing" secondItem="PTx-hD-gJT" secondAttribute="trailing" constant="161" id="ldB-Tn-M5r"/>
+                            <constraint firstItem="OaG-2S-ore" firstAttribute="trailing" secondItem="N4V-fx-VaI" secondAttribute="trailing" id="pRV-eB-lhY"/>
+                            <constraint firstItem="LPQ-7g-Agi" firstAttribute="leading" secondItem="yjq-nS-sCz" secondAttribute="leading" id="vBH-Bh-9kf"/>
+                            <constraint firstItem="LPQ-7g-Agi" firstAttribute="trailing" secondItem="q2S-Mf-MdJ" secondAttribute="trailing" id="xYg-hu-EES"/>
+                            <constraint firstItem="ThV-8f-jOA" firstAttribute="leading" secondItem="OaG-2S-ore" secondAttribute="leading" constant="387" id="ybU-Au-wD8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OaG-2S-ore"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="M9F-Lx-vle"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="q2S-Mf-MdJ" id="Dc3-f7-qjX"/>
+                        <outlet property="littlePhoto" destination="PTx-hD-gJT" id="xub-6W-6Tz"/>
+                        <outlet property="littlephoto2" destination="ThV-8f-jOA" id="88e-hj-xmc"/>
+                        <outlet property="photo" destination="rYp-he-2Qm" id="0zP-LS-BO5"/>
+                        <outlet property="tableview" destination="N4V-fx-VaI" id="ns1-01-W7F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hx2-4q-66k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

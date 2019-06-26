@@ -1,22 +1,19 @@
 //
-//  LineTableViewCell.swift
+//  SecondTableViewCell.swift
 //  Line Profile
 //
-//  Created by Henry on 2019/6/24.
+//  Created by Henry on 2019/6/25.
 //  Copyright © 2019 Henry. All rights reserved.
 //
 
 import UIKit
 
+class SecondTableViewCell: UITableViewCell {
 
-
-class LineTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var dataLabel: UILabel!
-    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var titalLabel: UILabel!
+    @IBOutlet weak var containLabel: UILabel!
     
     
-   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +25,10 @@ class LineTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-   
     
+    
+//    func dataUpdate(_ data: Data){
+//        stateLabel.text = data.contain
+//        mainLabel.text = data.title
+//    }
 }
