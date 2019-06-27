@@ -22,7 +22,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-c0-Ld3">
                         <rect key="frame" x="15" y="0.0" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqM-iM-YDk">
@@ -31,8 +31,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-Hw-m38">
+                        <rect key="frame" x="304" y="24.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="2b6-Hw-m38" firstAttribute="centerY" secondItem="UqM-iM-YDk" secondAttribute="centerY" id="9o9-Ts-sE2"/>
+                    <constraint firstAttribute="trailing" secondItem="2b6-Hw-m38" secondAttribute="trailing" constant="16" id="HCg-J6-EXe"/>
                     <constraint firstItem="UqM-iM-YDk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Jm1-XZ-s82"/>
                     <constraint firstItem="UqM-iM-YDk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="NLT-XJ-Z0U"/>
                     <constraint firstItem="dXf-c0-Ld3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="VfY-cL-wvb"/>
@@ -43,6 +51,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containLabel" destination="UqM-iM-YDk" id="9VY-WP-QlY"/>
+                <outlet property="idLabel" destination="2b6-Hw-m38" id="tpG-vu-a8Y"/>
                 <outlet property="titalLabel" destination="dXf-c0-Ld3" id="vET-Rg-fnJ"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="37.5"/>

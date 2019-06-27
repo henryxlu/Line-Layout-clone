@@ -65,6 +65,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableview.register(nib, forCellReuseIdentifier: "profilecell")
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,13 +117,16 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "profilecell", for: indexPath) as! SecondTableViewCell
+        let SwitchView = UISwitch()
         
         if indexPath.section == 0{
             cell.titalLabel.text = data.title[indexPath.row]
             cell.containLabel.text = data.main[indexPath.row]
+            cell.accessoryType = .disclosureIndicator
         }
         if indexPath.section == 1{
             cell.containLabel.text = data.share[indexPath.row]
+            cell.accessoryView = SwitchView
         }
         if indexPath.section == 2{
             cell.titalLabel.text = data.title2[indexPath.row]
@@ -129,9 +134,16 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }
         if indexPath.section == 3{
             cell.containLabel.text = data.id[indexPath.row]
+            if indexPath.row == 0 {
+                cell.idLabel.text = "lineid"
+            }
+            if indexPath.row == 1 {
+                cell.accessoryView = SwitchView
+            }
         }
         if indexPath.section == 4{
             cell.containLabel.text = data.qrcode[indexPath.row]
+            cell.accessoryType = .disclosureIndicator
         }
         if indexPath.section == 2 && indexPath.row == 1{
             cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -163,5 +175,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            performSegue(withIdentifier: "passTVC", sender: nil)
+        }
+    }
+    
+    
     
 }

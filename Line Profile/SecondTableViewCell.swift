@@ -12,6 +12,7 @@ class SecondTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titalLabel: UILabel!
     @IBOutlet weak var containLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     
     
     

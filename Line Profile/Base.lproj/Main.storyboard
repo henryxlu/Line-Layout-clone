@@ -130,11 +130,55 @@
                         <outlet property="littlephoto2" destination="ThV-8f-jOA" id="88e-hj-xmc"/>
                         <outlet property="photo" destination="rYp-he-2Qm" id="0zP-LS-BO5"/>
                         <outlet property="tableview" destination="N4V-fx-VaI" id="ns1-01-W7F"/>
+                        <segue destination="trB-XY-xd2" kind="push" identifier="passTVC" id="3Ay-dC-Ett"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hx2-4q-66k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="269.56521739130437" y="144.64285714285714"/>
+        </scene>
+        <!--Display name-->
+        <scene sceneID="sxR-1D-bhA">
+            <objects>
+                <viewController id="trB-XY-xd2" customClass="ThirdViewController" customModule="Line_Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hpo-KD-duT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCq-54-02M">
+                                <rect key="frame" x="20" y="148" width="374" height="41"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s27-6M-eeb">
+                                <rect key="frame" x="142" y="209" width="130" height="40"/>
+                                <color key="backgroundColor" red="0.20483719644750092" green="0.74455675776140673" blue="0.19288020163901934" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="GKR-fI-x81"/>
+                                    <constraint firstAttribute="height" constant="40" id="x4E-US-AIE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="save">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s27-6M-eeb" firstAttribute="centerX" secondItem="bN5-ni-ry2" secondAttribute="centerX" id="8Dr-7b-lsE"/>
+                            <constraint firstItem="bN5-ni-ry2" firstAttribute="trailing" secondItem="KCq-54-02M" secondAttribute="trailing" constant="20" id="Pjj-q2-krm"/>
+                            <constraint firstItem="KCq-54-02M" firstAttribute="leading" secondItem="bN5-ni-ry2" secondAttribute="leading" constant="20" id="Qkh-0r-vpa"/>
+                            <constraint firstItem="KCq-54-02M" firstAttribute="top" secondItem="bN5-ni-ry2" secondAttribute="top" constant="60" id="Udq-2u-VPD"/>
+                            <constraint firstItem="s27-6M-eeb" firstAttribute="top" secondItem="KCq-54-02M" secondAttribute="bottom" constant="20" id="svX-FV-uAx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bN5-ni-ry2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Display name" id="Qfa-kv-Rsh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtH-FF-Z3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207.2463768115942" y="150"/>
         </scene>
     </scenes>
 </document>
