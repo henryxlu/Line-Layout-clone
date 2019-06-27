@@ -8,25 +8,32 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+protocol SendDataBackDelegate {
+    func passName (name:String)
+}
 
+
+class ThirdViewController: UIViewController {
+    @IBOutlet weak var textfield: UITextField!
+    
+    var name : String?
+    var delegate:SendDataBackDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         self.navigationController?.navigationBar.topItem?.title = ""
-        // Do any additional setup after loading the view.
+        
+        textfield.text = name
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveName(_ sender: UIButton) {
+        delegate?.passName(name: textfield.text!)
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
+    
 
 }

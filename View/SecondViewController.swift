@@ -8,7 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+//protocol PassDatadelegate {
+//    func passdata (_ data:String)
+//}
+
+class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SendDataBackDelegate {
+    
+    
     
     var data = SecondData()
     
@@ -52,6 +59,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var littlephoto2: UIImageView!
     @IBOutlet weak var tableview: UITableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,6 +77,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.navigationController?.navigationBar.topItem?.title = ""
     }
+    
+    
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -119,6 +132,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableview.dequeueReusableCell(withIdentifier: "profilecell", for: indexPath) as! SecondTableViewCell
         let SwitchView = UISwitch()
         
+        //  寫enum取代數字
         if indexPath.section == 0{
             cell.titalLabel.text = data.title[indexPath.row]
             cell.containLabel.text = data.main[indexPath.row]
@@ -178,11 +192,36 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        
         if indexPath.section == 0 && indexPath.row == 0 {
-            performSegue(withIdentifier: "passTVC", sender: nil)
+            
+            //傳值方法1：需搭配segue，純傳畫面不做事，傳畫面後做動作需要配合prepare for segue
+            //performSegue(withIdentifier: "passTVC", sender: nil)
+            
+            //傳值方法2：直接判斷畫面直接傳過去
+            let thirdVC = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "TVC") as!ThirdViewController
+            thirdVC.name = data.main[0]
+            //delegate需指定
+            thirdVC.delegate = self
+            self.navigationController?.pushViewController(thirdVC, animated: true)
+            
+            
         }
+        
     }
     
+    func passName(name: String) {
+        data.main[0] = name
+        //cell需要relode資料才能更新資訊，也可寫在viewwillappear
+        tableview.reloadData()
+    }
     
+    //傳值方法1：需搭配performsegue傳入的畫面帶資料
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if let thirdVC = segue.destination as? ThirdViewController {
+    //            thirdVC.name = data.main[0]
+    //        }
+    //    }
     
 }

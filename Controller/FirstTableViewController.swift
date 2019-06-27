@@ -69,6 +69,7 @@ class FirstTableViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //indexPath == [0,0]
         if (indexPath.section == 0) && (indexPath.row == 0){
             performSegue(withIdentifier: "passSVC", sender: nil)
         }
